@@ -32,6 +32,8 @@ Source         Destination
 -   Model output
     -   Destination
 
+<img width="531" alt="image" src="https://user-images.githubusercontent.com/2799516/205968196-c790073d-0528-413f-ae2f-cae5a63d272a.png">
+
 In a clean way, we should provide the model with the source code, two variants and learn to predict the destination code.
 However:
 
@@ -55,6 +57,9 @@ Source         Diff -> Destination
     -   Diff (VariantA - VariantB)
 -   Model output
     -   Destination
+
+<img width="632" alt="image" src="https://user-images.githubusercontent.com/2799516/205968282-068cd24b-daa6-4e5a-b8c6-8521fa870b28.png">
+
 
 ## Use
 
