@@ -1,9 +1,16 @@
-from git import Repo
-from utils.model import Repository, session
+"""
+Download public repositories from GitHub.
+Only the first 100 python repositories are downloaded.
+"""
+
 import requests
+from git import Repo
+
+from model import Repository, session
 
 url = "https://api.github.com/search/repositories?q=stars:%3E100+language:python&per_page=100&page={page}&s=stars&o=desc"
 
+# TODO: add pagination
 res = requests.get(url.format(page=0))
 
 already_downloaded = [n[0] for n in session.query(Repository.url).all()]

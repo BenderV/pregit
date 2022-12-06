@@ -1,12 +1,18 @@
-"""TODO
-Delete old DB data
+"""
+Parse repository and extract commit info from merge commit.
+commit_file contains:
+    - path
+    - source_content: content of file in commit_source (save in ./files)
+    - dest_content: content of file in commit_dest (save in ./files)
+    - diff: diff of file between commit_source and commit_dest
 """
 
 import git
-from utils.model import Repository, CommitFile
-from utils.repository import RepoWrapper
 
-repositories = Repository.query().filter_by(name="hubtech").all()
+from model import CommitFile, Repository
+from repository import RepoWrapper
+
+repositories = Repository.query().all()
 
 
 def parse_repository(repository):
